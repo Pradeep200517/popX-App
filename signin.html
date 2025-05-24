@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PopX Sign In</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .input-field {
+      border: 1px solid #E8E8FF;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 16px;
+      color: #1A1A1A;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .input-field:focus {
+      outline: none;
+      border-color: #6C63FF;
+      box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+    }
+    .label-text {
+      color: #6C63FF;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem;
+      }
+      .title-text {
+        font-size: 24px;
+      }
+      .text-base {
+        font-size: 14px;
+      }
+      .input-field {
+        padding: 10px 12px;
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1rem;
+      }
+      .title-text {
+        font-size: 20px;
+      }
+      .text-base {
+        font-size: 13px;
+      }
+      .input-field {
+        padding: 8px 10px;
+        font-size: 13px;
+      }
+      .btn-gradient {
+        padding: 0.75rem;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const App = () => {
+      return (
+        <div className="min-h-screen bg-[#F7F7FF] flex items-center justify-center">
+          <div className="bg-white rounded-3xl shadow-lg p-10 w-full max-w-md">
+            <h1 className="text-[28px] font-bold text-[#1A1A1A] mb-2 tracking-tight">
+              Sign in to your <span className="font-extrabold">PopX</span> account
+            </h1>
+            <p className="text-gray-500 text-base mb-8 leading-tight">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <div className="space-y-6">
+              <div>
+                <label className="label-text block mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  placeholder="Enter email address"
+                  className="input-field"
+                />
+              </div>
+              <div>
+                <label className="label-text block mb-2">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  placeholder="Enter password"
+                  className="input-field"
+                />
+              </div>
+            </div>
+            <button className="w-full bg-[#6C63FF] text-white py-[14px] rounded-xl transition duration-200 text-lg font-medium mt-8 hover:bg-[#5A52FF]" onClick="window.location.href='main.html'">
+              Login
+            </button>
+            <p className="text-gray-500 text-sm mt-6 leading-tight">
+              Don't have an account?{' '}
+              <a href="signup.html" className="text-[#6C63FF] font-medium hover:underline hover:text-[#5A52FF]">Create one</a>
+            </p>
+          </div>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>

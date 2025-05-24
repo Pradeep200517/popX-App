@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PopX Login</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.24.0/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .card {
+      box-shadow: 0 8px 24px rgba(108, 99, 255, 0.15);
+      transition: transform 0.2s ease-in-out;
+      margin: 1rem;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+    }
+    .btn-gradient {
+      background: linear-gradient(135deg, #6C63FF 0%, #5A52FF 100%);
+      transition: background 0.3s ease;
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(135deg, #5A52FF 0%, #4A42FF 100%);
+      transform: scale(1.02);
+    }
+    .checkmark-circle {
+      box-shadow: 0 4px 12px rgba(108, 99, 255, 0.2);
+      transition: transform 0.2s ease-in-out;
+    }
+    .checkmark-circle:hover {
+      transform: scale(1.05);
+    }
+    .welcome-text {
+      background: linear-gradient(90deg, #1A1A1A, #333333);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .card {
+        padding: 1.5rem;
+      }
+      .welcome-text {
+        font-size: 24px;
+      }
+      .text-base {
+        font-size: 14px;
+      }
+      .checkmark-circle {
+        width: 100px;
+        height: 100px;
+      }
+      .checkmark-circle svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 1rem;
+      }
+      .welcome-text {
+        font-size: 20px;
+      }
+      .text-base {
+        font-size: 13px;
+      }
+      .checkmark-circle {
+        width: 80px;
+        height: 80px;
+      }
+      .checkmark-circle svg {
+        width: 20px;
+        height: 20px;
+      }
+      .btn-gradient {
+        padding: 0.75rem;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    const App = () => {
+      return (
+        <div className="min-h-screen bg-[#F7F7FF] flex items-center justify-center">
+          <div className="bg-white rounded-3xl p-10 w-full max-w-md text-center card">
+            <div className="flex justify-center mb-6">
+              <div className="w-14 h-14 bg-[#E8E8FF] rounded-full flex items-center justify-center checkmark-circle">
+                <svg className="w-9 h-9 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path>
+                </svg>
+              </div>
+            </div>
+            <h1 className="text-[28px] font-bold mb-3 tracking-tight welcome-text">
+              Welcome to <span className="font-extrabold">PopX</span>
+            </h1>
+            <p className="text-gray-500 text-base mb-8 leading-tight">
+              Join PopX to unlock exclusive features and connect with our amazing community!
+            </p>
+            <a href="signup.html" className="w-full text-white py-[14px] rounded-xl text-lg font-medium mb-4 btn-gradient inline-block">
+              Create Account
+            </a>
+            <p className="text-gray-600 text-base">
+              Already registered?{' '}
+              <a href="signin.html" className="text-[#6C63FF] font-medium hover:underline hover:text-[#5A52FF] transition-colors duration-200">
+                Login
+              </a>
+            </p>
+          </div>
+        </div>
+      );
+    };
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
