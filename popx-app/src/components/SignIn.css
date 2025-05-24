@@ -1,0 +1,160 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.signin-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F7F7FF;
+}
+
+.card {
+  background-color: white;
+  border-radius: 24px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(108, 99, 255, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  margin: 1rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(108, 99, 255, 0.25);
+}
+
+.title-text {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #1A1A1A;
+}
+
+.brand {
+  font-weight: 900;
+}
+
+.description {
+  color: #6B7280;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-text {
+  color: #6C63FF;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input-field {
+  border: 1px solid #E8E8FF;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 16px;
+  color: #1A1A1A;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #6C63FF;
+  box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.btn-gradient {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #6C63FF 0%, #5A52FF 100%);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #5A52FF 0%, #4A42FF 100%);
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+.signup-link {
+  color: #6B7280;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #6C63FF;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.signup-link a:hover {
+  color: #5A52FF;
+  text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+  }
+  
+  .title-text {
+    font-size: 24px;
+  }
+  
+  .description {
+    font-size: 14px;
+  }
+  
+  .input-field {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+  
+  .title-text {
+    font-size: 20px;
+  }
+  
+  .description {
+    font-size: 13px;
+  }
+  
+  .input-field {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  
+  .btn-gradient {
+    padding: 0.75rem;
+    font-size: 14px;
+  }
+}

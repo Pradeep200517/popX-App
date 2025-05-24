@@ -1,0 +1,331 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f5f7fa;
+  color: #2d3748;
+}
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.title-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.label-text {
+  font-size: 0.875rem;
+  color: #4a5568;
+  font-weight: 600;
+}
+
+.input-field {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  color: #2d3748;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.radio-label input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #6366f1, #7c3aed);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.form-footer {
+  margin-top: 1.5rem;
+}
+
+.terms-text {
+  font-size: 0.875rem;
+  color: #4a5568;
+  margin-bottom: 0.75rem;
+}
+
+.terms-text .link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-text .link:hover {
+  text-decoration: underline;
+}
+
+.login-link {
+  font-size: 0.875rem;
+  color: #4a5568;
+  text-align: center;
+}
+
+.login-link .link {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-link .link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile First Approach */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+    max-width: 100%;
+    margin: 0.5rem;
+  }
+
+  .title-text {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group {
+    gap: 0.75rem;
+  }
+
+  .label-text {
+    font-size: 0.85rem;
+  }
+
+  .input-field {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    min-height: 40px;
+  }
+
+  .radio-group {
+    gap: 0.75rem;
+  }
+
+  .radio-label {
+    font-size: 0.85rem;
+  }
+
+  .radio-label input {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    min-width: 200px;
+    margin: 0 auto;
+  }
+
+  .form-footer {
+    margin-top: 1.5rem;
+  }
+
+  .terms-text {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .login-link {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .signup-container {
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 2rem;
+    max-width: 90%;
+  }
+
+  .title-text {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .input-field {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.5rem;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .form-footer {
+    margin-top: 2rem;
+  }
+
+  .terms-text {
+    font-size: 0.9rem;
+  }
+
+  .login-link {
+    font-size: 0.9rem;
+  }
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+
+  .signup-container {
+    padding: 2rem;
+  }
+
+  .card {
+    padding: 2.5rem;
+    max-width: 500px;
+  }
+
+  .title-text {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .input-field {
+    padding: 0.875rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .btn-primary {
+    padding: 0.875rem 1.75rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Large Screen View */
+@media (min-width: 1024px) {
+  .card {
+    max-width: 600px;
+  }
+
+  .title-text {
+    font-size: 2.25rem;
+  }
+
+  .description {
+    font-size: 1.25rem;
+  }
+
+  .input-field {
+    padding: 1rem 1.5rem;
+  }
+
+  .btn-primary {
+    padding: 1rem 2rem;
+  }
+}
