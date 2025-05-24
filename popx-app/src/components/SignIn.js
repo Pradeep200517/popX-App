@@ -25,6 +25,7 @@ const SignIn = () => {
     } else {
       alert('Invalid email or password');
     }
+    window.location.href = '/main';
   };
 
   return (
