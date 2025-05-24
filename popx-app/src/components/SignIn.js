@@ -4,9 +4,27 @@ import './SignIn.css';
 const SignIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
-    // For now, redirect to main page
-    window.location.href = '/main';
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    
+    // Get user data from localStorage
+    const users = JSON.parse(localStorage.getItem('users') || '[]');
+    
+    // Find user with matching email
+    const user = users.find(u => u.email === email);
+    
+    if (user && user.password === password) {
+      // Store user data in localStorage
+      localStorage.setItem('currentUser', JSON.stringify({
+        ...user,
+        isAuthenticated: true
+      }));
+      
+      // Redirect to main page
+      window.location.href = '/main';
+    } else {
+      alert('Invalid email or password');
+    }
   };
 
   return (
