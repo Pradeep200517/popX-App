@@ -6,6 +6,7 @@ const SignIn = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+    window.location.href = '/main'
     
     // Get user data from localStorage
     const users = JSON.parse(localStorage.getItem('users') || '[]');
